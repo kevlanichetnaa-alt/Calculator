@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Calc</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <!-- Background ambient orbs -->
+ <div class="bg-orb orb-1"></div>
+ <div class="bg-orb orb-2"></div>
+
+ <main class="wrapper">
+
+  <!-- Calculator card -->
+  <div class="calculator" role="application" aria-label="Calculator">
+
+   <!-- Display -->
+   <div class="display" aria-live="polite">
+     <span class="display__expression" id="expression" aria-label="Expression"></span>
+     <span class="display__result" id="result" aria-label="Result">0</span>
+   </div>
+
+   <!-- Button grid -->
+   <div class="grid">
+
+    <!-- Row 1: utilities -->
+     <button class="btn btn--utility btn--wide" data-action="clear" aria-label="Clear">C</button>
+     <button class="btn btn--utility" data-action="delete" aria-label="Delete">⌫</button>
+     <button class="btn btn--operator" data-operator="/" aria-label="Divide">÷</button>
+
+    <!-- Row 2: 7 8 9 × -->
+    <button class="btn btn--digit" data-digit="7">7</button>
+    <button class="btn btn--digit" data-digit="8">8</button>
+    <button class="btn btn--digit" data-digit="9">9</button>
+     <button class="btn btn--operator" data-operator="*" aria-label="Multiply">×</button>
+
+    <!-- Row 3: 4 5 6 − -->
+    <button class="btn btn--digit" data-digit="4">4</button>
+    <button class="btn btn--digit" data-digit="5">5</button>
+    <button class="btn btn--digit" data-digit="6">6</button>
+     <button class="btn btn--operator" data-operator="-" aria-label="Subtract">−</button>
+
+    <!-- Row 4: 1 2 3 + -->
+    <button class="btn btn--digit" data-digit="1">1</button>
+    <button class="btn btn--digit" data-digit="2">2</button>
+    <button class="btn btn--digit" data-digit="3">3</button>
+     <button class="btn btn--operator" data-operator="+" aria-label="Add">+</button>
+
+    <!-- Row 5: 0 . = -->
+    <button class="btn btn--digit btn--wide" data-digit="0">0</button>
+     <button class="btn btn--digit" data-action="decimal" aria-label="Decimal point">.</button>
+     <button class="btn btn--equals" data-action="equals" aria-label="Equals">=</button>
+
+   </div>
+  </div>
+
+ </main>
+
+ <script src="script.js"></script>
+</body>
+</html>
